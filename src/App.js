@@ -36,7 +36,7 @@ export default function App() {
   console.log(noCount);
   return (
     <>
-      <div className="container">
+      {/* <div className="container">
         <div className="row">
           <div className="col-2 border p-1  text-center">P Tamba</div>
           <div className="col-3 border p-1   text-center">Tamba Status</div>
@@ -59,21 +59,18 @@ export default function App() {
             })}
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="container">
         <table className="table table-bordered">
           <thead>
-            <tr className="table-active">
-              <th className="col-3">P tamba</th>
-              <th className="col-3">Tamba Status</th>
-              <th className="col-6">Demo count</th>
+            <tr className="table-light">
+              <th className="col-2">P tamba</th>
+              <th className="col-2">Tamba Status</th>
+              <th className="col-8">Demo count</th>
             </tr>
           </thead>
           <tbody>
-            <tr
-              className="align-items-center justify-content-center"
-              style={{ border: '2px solid black' }}
-            >
+            <tr className="align-items-center justify-content-center">
               <td rowSpan={`${yesCount + 1}`} className="text-center">
                 Yes
               </td>
@@ -82,7 +79,7 @@ export default function App() {
               if (item.ptamba === 'Yes') {
                 return (
                   <tr>
-                    <td>{item.name}</td>
+                    <td className="text-center">{item.name}</td>
                     <td>
                       {' '}
                       <VerticalBar total={maxValue} count={item.value} />
@@ -100,7 +97,7 @@ export default function App() {
               if (item.ptamba === 'No') {
                 return (
                   <tr>
-                    <td>{item.name}</td>
+                    <td className="text-center">{item.name}</td>
                     <td>
                       {' '}
                       <VerticalBar total={maxValue} count={item.value} />
