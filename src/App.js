@@ -70,8 +70,13 @@ export default function App() {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td rowSpan={`${yesCount + 1}`}>Yes</td>
+            <tr
+              className="align-items-center justify-content-center"
+              style={{ border: '2px solid black' }}
+            >
+              <td rowSpan={`${yesCount + 1}`} className="text-center">
+                Yes
+              </td>
             </tr>
             {Mydata.map((item) => {
               if (item.ptamba === 'Yes') {
@@ -87,7 +92,9 @@ export default function App() {
               }
             })}
             <tr>
-              <td rowSpan={`${noCount + 1}`}>No</td>
+              <td rowSpan={`${noCount + 1}`} className="text-center">
+                No
+              </td>
             </tr>
             {Mydata.map((item) => {
               if (item.ptamba === 'No') {
